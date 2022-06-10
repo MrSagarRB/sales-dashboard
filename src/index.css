@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .test {
+    border: 1px solid red;
+  }
+
+  .bg_1 {
+    background-color: #cbd5e1;
+    /* background: red; */
+  }
+
+  .bg_2 {
+    background-color: #ffffff;
+  }
+
+  .nav_title {
+    font-size: 14px;
+    color: #1f4173;
+    font-weight: 600;
+    opacity: 0.5;
+  }
+
+  .hideOnSmallScreen {
+    display: none;
+  }
+
+  .rounded_div {
+    border-radius: 37px 0px 0px 37px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 49px;
+    gap: 12px;
+    padding: 0 18px 0 18px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  .rounded_divActive {
+    background-color: #cbd5e1;
+    color: #003ad2;
+    transition: all 0.5s ease-in;
+  }
+
+  .rounded_divNotActive {
+    color: #1f4173;
+
+    /* opacity: 0.5; */
+  }
+
+  .lg1 {
+    background: linear-gradient(89.69deg, #f39034 2.03%, #ff2727 99.73%);
+  }
+
+  .lg2 {
+    background: linear-gradient(270deg, #003AD2 0%, #0097EC 100%);
+  }
+  .lg3 {
+    background: linear-gradient(270.23deg, #00A843 0.19%, #1FD071 99.8%);
+  }
+
+  .lg4 {
+    background: linear-gradient(269.97deg, #5900C9 0.02%, #9852F0 99.98%);
+  }
+
+  .deskTopScreen-Only {
+    @apply hidden md:flex;
+  }
 }
