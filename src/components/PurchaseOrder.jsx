@@ -5,27 +5,27 @@ const purchaseOrderData = [
   {
     orderNo: "#P00005",
     value: " 12000",
-    iconColor: "bg1",
+    iconColor: "iconColor1",
   },
   {
     orderNo: "#P00009",
     value: " 9000",
-    iconColor: "bg1",
+    iconColor: "iconColor2",
   },
   {
-    orderNo: "#P00008",
+    orderNo: "#003AD2",
     value: " 2000",
-    iconColor: "bg1",
+    iconColor: "iconColor3",
   },
   {
     orderNo: "#P00002",
     value: " 650",
-    iconColor: "bg1",
+    iconColor: "iconColor4",
   },
   {
     orderNo: "#P00007",
     value: " 1200",
-    iconColor: "bg1",
+    iconColor: "iconColor5",
   },
 ];
 
@@ -50,10 +50,13 @@ function PurchaseOrder() {
             return (
               <div className="flex justify-between">
                 <div className="flex gap-3">
-                  <CircleOutlinedIcon className="text-[#F67932] " />{" "}
+                  <CircleOutlinedIcon className={i.iconColor} />{" "}
                   <div>
                     <p className="text-[#003AD2]"> {i.orderNo} </p>{" "}
-                    <p className="text-[#1F4173] text-[13px]"> Ernest Gaboyan</p>
+                    <p className="text-[#1F4173] text-[13px]">
+                      {" "}
+                      Ernest Gaboyan
+                    </p>
                   </div>
                 </div>
                 <div className="text-[#1F4173] font-semibold">$ {i.value}</div>
@@ -61,9 +64,11 @@ function PurchaseOrder() {
             );
           })}
         </div>
-       
       </div>
-      <a className="text-[#003AD2] font-bold" href="" > View all</a>
+      <a className="text-[#003AD2] font-bold" href="">
+        {" "}
+        View all
+      </a>
     </div>
   );
 }

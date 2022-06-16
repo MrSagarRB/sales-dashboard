@@ -98,7 +98,15 @@ function SaleOrderTable() {
         <p className="text-[#1F4173] font-bold text-[16px]">
           Latest sales orders - By sales channels
         </p>{" "}
-        <div>Ecwid</div>
+        <div>
+          {" "}
+          <select className="outline-none">
+            <option value="" className="">Option 1</option>
+            <option value="" className="">Option 1</option>
+            <option value="" className="">Option 1</option>
+            <option value="" className="">Option 1</option>
+          </select>{" "}
+        </div>
       </div>
       <div className=" flex justify-between mt-5">
         <div className=" flex h-[43px]  justify-between items-center border-b">

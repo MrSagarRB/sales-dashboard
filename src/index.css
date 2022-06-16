@@ -85,12 +85,31 @@
     background: rgba(120, 40, 220, 0.15);
   }
 
+  .iconColor1{
+    color: #F67932;
+  }
+
+  .iconColor2{
+    color: #00A84D;
+  }
+  .iconColor3{
+    color: #00A84D;
+  }
+  .iconColor4{
+    color: #E80000;
+  }
+  .iconColor5{
+    color: #8676FF;
+  }
+
   .activeFilterTab{
     background: rgba(31, 65, 115, 0.1);
     border-radius: 5px;
     color:#000000 !important;
     /* font-weight: bold; */
   }
+
+
 
  
 
