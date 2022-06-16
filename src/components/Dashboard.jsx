@@ -12,6 +12,7 @@ import BalanceIcon from "@mui/icons-material/Balance";
 import SaleOrderTable from "./SaleOrderTable";
 import PurchaseOrder from "./PurchaseOrder";
 import CountUp from "react-countup";
+import TopSellingProduct from "./TopSellingProduct";
 
 const colorCardData = [
   {
@@ -148,7 +149,7 @@ function Dashboard() {
       <div className="  mt-5 w-[100%] h-[496px] flex flex-col sm:flex-row  gap-5">
         <SaleOrderTable />
         <PurchaseOrder />
-        <PurchaseOrder />
+       <TopSellingProduct/>
       </div>
     </div>
   );
