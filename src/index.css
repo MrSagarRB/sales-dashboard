@@ -85,7 +85,21 @@
     background: rgba(120, 40, 220, 0.15);
   }
 
+  .activeFilterTab{
+    background: rgba(31, 65, 115, 0.1);
+    border-radius: 5px;
+    color:#000000 !important;
+    /* font-weight: bold; */
+  }
+
+ 
+
+
+
+
   .deskTopScreen-Only {
     @apply hidden md:flex;
   }
 }
+
+
