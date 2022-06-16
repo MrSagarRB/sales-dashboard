@@ -11,7 +11,7 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 
 function Sidebar() {
-  const [sidbarExpan, setSidebarExpand] = useState(true);
+  const [sidbarExpan, setSidebarExpand] = useState(false);
   const [activeTab, setActiveTab] = useState("Inventory");
 
   const sidebarData = [
@@ -81,11 +81,7 @@ function Sidebar() {
                 }}
               >
                 {i.icon}
-                {sidbarExpan ? (
-                  <p className="">
-                    {i.title}
-                  </p>
-                ) : null}
+                {sidbarExpan ? <p className="">{i.title}</p> : null}
               </div>
             </div>
           );

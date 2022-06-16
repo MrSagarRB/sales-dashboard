@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Container from "./components/Container";
+import Dashboard from "./components/Dashboard";
+
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 
@@ -11,8 +12,8 @@ function App() {
 
       <div className="flex flex-col w-full">
         <Header />
-        <div className=" h-full z-30 bg-slate-300"> 
-          <Container />
+        <div className=" h-full z-30 bg-slate-300">
+          <Dashboard />
         </div>
       </div>
     </div>

@@ -56,14 +56,33 @@
   }
 
   .lg2 {
-    background: linear-gradient(270deg, #003AD2 0%, #0097EC 100%);
+    background: linear-gradient(270deg, #003ad2 0%, #0097ec 100%);
   }
   .lg3 {
-    background: linear-gradient(270.23deg, #00A843 0.19%, #1FD071 99.8%);
+    background: linear-gradient(270.23deg, #00a843 0.19%, #1fd071 99.8%);
   }
 
   .lg4 {
-    background: linear-gradient(269.97deg, #5900C9 0.02%, #9852F0 99.98%);
+    background: linear-gradient(269.97deg, #5900c9 0.02%, #9852f0 99.98%);
+  }
+
+  .icon-bg1 {
+    color: #fa582e;
+    background: rgba(250, 88, 46, 0.15);
+  }
+
+  .icon-bg2 {
+    color: #0163de;
+    background: rgba(1, 99, 222, 0.15);
+  }
+
+  .icon-bg3 {
+    color: #0fbb59;
+    background: rgba(15, 187, 89, 0.15);
+  }
+  .icon-bg4 {
+    color: #7828dc;
+    background: rgba(120, 40, 220, 0.15);
   }
 
   .deskTopScreen-Only {

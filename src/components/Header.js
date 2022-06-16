@@ -10,11 +10,11 @@ import { Avatar } from "@nextui-org/react";
 
 function Header() {
   return (
-    <div className="h-[70px] w-full bg_2 flex items-center px-0 justify-evenly">
+    <div className="  w-full bg_2 flex items-center px-0 justify-evenly ">
       <div className="  gap-2 deskTopScreen-Only">
-        <div className="flex items-center item-center gap-2 ">
+        <div className="flex items-center item-center gap-0 ">
           {" "}
-          <DriveFolderUploadIcon className="text-[#1F4173]" />
+          <DriveFolderUploadIcon className="text-[#1F4173] " />
           <p className="nav_title text-[#1F4173]">Sales Orders</p>{" "}
         </div>
 
@@ -35,14 +35,14 @@ function Header() {
       </div>
 
       <div className="items-center gap-3 mx-5 deskTopScreen-Only">
-        <div className="w-[200px] ">
+        <div className="w-[150px] ">
           {" "}
           <Progress value={40} size="sm" color="primary" status="primary" />
         </div>
         <p className="text-xs">Task has done on 33%</p>
       </div>
 
-      <div className="flex w-[80%] md:w-[20%] h-[39px] items-center bg_1 px-3 deskTopScreen-Only ">
+      <div className="flex w-[80%] md:w-[20%] h-[30px] items-center bg_1 px-3 deskTopScreen-Only ">
         {" "}
         <input
           type="text"
