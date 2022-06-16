@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FeedIcon from "@mui/icons-material/Feed";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import TaskIcon from "@mui/icons-material/Task";
@@ -11,6 +11,7 @@ import DriveFileMoveIcon from "@mui/icons-material/DriveFileMove";
 import BalanceIcon from "@mui/icons-material/Balance";
 import SaleOrderTable from "./SaleOrderTable";
 import PurchaseOrder from "./PurchaseOrder";
+import CountUp from "react-countup";
 
 const colorCardData = [
   {
@@ -79,6 +80,8 @@ const whiteCardData = [
 ];
 
 function Dashboard() {
+
+
   return (
     <div className="py-[10px] px-[20px]  overflow-scroll h-full ">
       <div className="  flex flex-col sm:flex-row justify-between  items-center overflow-hidden">
@@ -100,7 +103,10 @@ function Dashboard() {
             >
               <div className=" h-full w-full leading-tight ">
                 <p className="text-[14px]">{i.title}</p>
-                <p className="text-[42px]"> {i.value}</p>
+                <p className="text-[42px]">
+                  {" "}
+                  <CountUp end={i.value} />
+                </p>
                 <p className="text-[14px]">{i.subTitle} </p>
               </div>
               <div className=" h-full w-[30%] flex flex-col justify-between items-end">
@@ -129,7 +135,7 @@ function Dashboard() {
               </div>
               <div className="  flex justify-between items-center ">
                 {" "}
-                <p className="text-[32px] text-[#1F4173]">{i.value}</p>{" "}
+                <p className="text-[32px] text-[#1F4173] "><CountUp end={i.value} delay={3} /></p>{" "}
                 <div className="h-[43px] w-[41px] bg-[#E6EAF0] flex items-center justify-center ">
                   {" "}
                   <ArrowForwardIosIcon />
