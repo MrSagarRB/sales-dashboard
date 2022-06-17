@@ -35,7 +35,7 @@ const topSallingProductPrice = [
 
 function TopSellingProduct() {
   return (
-    <div className=" sm:w-[25%]  h-full px-10 py-5  bg-white rounded-[20px]">
+    <div className=" md:w-[25%] mt-52 md:mt-0  h-full px-10 py-5  bg-white rounded-[20px]  ">
       <p className="text-[16px] text-[#1F4173] font-bold"> Purchase Order</p>
       <div className=" h-full w-full mt-3 grid grid-cols-2 ">
         {topSallingProductPrice.map((i) => {

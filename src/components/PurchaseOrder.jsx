@@ -31,7 +31,7 @@ const purchaseOrderData = [
 
 function PurchaseOrder() {
   return (
-    <div className=" sm:w-[25%]  h-full px-10 py-5  bg-white rounded-[20px]">
+    <div className=" md:w-[25%]  h-full px-10 py-5  bg-white rounded-[20px] ">
       <p className="text-[16px] text-[#1F4173] font-bold"> Purchase Order</p>
       <div className="mt-5 flex flex-col gap-2 text-[16px] text-[#1F4173]">
         <div className="flex justify-between ">

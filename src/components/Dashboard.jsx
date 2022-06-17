@@ -13,6 +13,7 @@ import SaleOrderTable from "./SaleOrderTable";
 import PurchaseOrder from "./PurchaseOrder";
 import CountUp from "react-countup";
 import TopSellingProduct from "./TopSellingProduct";
+import SaleOrderChart from "./SaleOrderChart";
 
 const colorCardData = [
   {
@@ -146,11 +147,13 @@ function Dashboard() {
           );
         })}
       </div>
-      <div className="  mt-5 w-[100%] h-[496px] flex flex-col sm:flex-row  gap-5">
+      <div className="  mt-5 w-[100%] h-[496px] flex flex-col md:flex-row    gap-5">
         <SaleOrderTable />
         <PurchaseOrder />
        <TopSellingProduct/>
+     
       </div>
+      <SaleOrderChart />
     </div>
   );
 }

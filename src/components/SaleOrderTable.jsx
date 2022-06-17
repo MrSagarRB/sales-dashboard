@@ -93,7 +93,7 @@ function SaleOrderTable() {
   console.log(search);
 
   return (
-    <div className="sm:w-[52%] h-full px-10 py-5  bg-white rounded-[20px] ">
+    <div className="md:w-[52%] h-full px-10 py-5  bg-white rounded-[20px] ">
       <div className=" flex justify-between ">
         <p className="text-[#1F4173] font-bold text-[16px]">
           Latest sales orders - By sales channels
