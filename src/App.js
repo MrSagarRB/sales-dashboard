@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import CRMpage from "./components/CRMpage";
+import CRMpage from "./components/pages/CRMpage";
 import Dashboard from "./components/Dashboard";
 
 import Header from "./components/Header";
-import Inventory from "./components/Inventory";
+import Inventory from "./components/pages/Inventory";
 import Sidebar from "./components/Sidebar";
-import Orders from "./components/Orders";
-import Stocks from "./components/Stocks";
-import Reports from "./components/Reports";
+import Orders from "./components/pages/Orders";
+import Stocks from "./components/pages/Stocks";
+import Reports from "./components/pages/Reports";
 
 function App() {
   const [sidbarExpan, setSidebarExpand] = useState(true);

@@ -6,7 +6,6 @@ function AmazonVendorCard({ data }) {
   return (
     <div className="w-full h-full bg-white rounded-[20px] px-10 py-5 ">
       <div className=" flex justify-between">
-        {" "}
         <p className="text-[#1F4173] font-bold"> {data?.title}</p>{" "}
         <div className="border-b-2">
           <input
@@ -35,8 +34,6 @@ function AmazonVendorCard({ data }) {
                 <td className="text-[#1F4173]"> {item.skuQty}</td>
                 <td className="text-[#1F4173]"> {item.itemQty}</td>
                 <td className="text-[#1F4173]">$ {item.orderValue}</td>
-
-                
               </tr>
             );
           })}
