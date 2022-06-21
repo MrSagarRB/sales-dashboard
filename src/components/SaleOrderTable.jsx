@@ -101,10 +101,18 @@ function SaleOrderTable() {
         <div>
           {" "}
           <select className="outline-none">
-            <option value="" className="">Option 1</option>
-            <option value="" className="">Option 1</option>
-            <option value="" className="">Option 1</option>
-            <option value="" className="">Option 1</option>
+            <option value="" className="">
+              Option 1
+            </option>
+            <option value="" className="">
+              Option 1
+            </option>
+            <option value="" className="">
+              Option 1
+            </option>
+            <option value="" className="">
+              Option 1
+            </option>
           </select>{" "}
         </div>
       </div>

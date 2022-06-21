@@ -61,7 +61,7 @@ function SaleOrderChart() {
       id: "simple-bar",
     },
     xaxis: {
-      categories: [1, 2, 3, 4], //will be displayed on the x-asis
+      categories: ["Cloths", "Footware", "Electronics", "Mobile"], //will be displayed on the x-asis
     },
   };
 

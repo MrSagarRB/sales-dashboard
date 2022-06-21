@@ -1,19 +1,50 @@
 import React, { useState } from "react";
+import CRMpage from "./components/CRMpage";
 import Dashboard from "./components/Dashboard";
 
 import Header from "./components/Header";
+import Inventory from "./components/Inventory";
 import Sidebar from "./components/Sidebar";
+import Orders from "./components/Orders";
+import Stocks from "./components/Stocks";
+import Reports from "./components/Reports";
 
 function App() {
   const [sidbarExpan, setSidebarExpand] = useState(true);
+  const [activeTab, setActiveTab] = useState("Dashboard");
+
+  console.log(activeTab);
+
+  const getCorrectPage = (activeTab) => {
+    switch (activeTab) {
+      case "Dashboard":
+        return <Dashboard />;
+      case "Inventory":
+        return <Inventory />;
+      case "CRM":
+        return <CRMpage />;
+      case "Orders":
+        return <Orders />;
+      case "Stocks":
+        return <Stocks />;
+      case "Reports":
+        return <Reports />;
+    }
+  };
+
+  console.log(activeTab);
+
   return (
     <div className=" w-full h-screen flex bg-slate-300">
-      <Sidebar />
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <div className="flex flex-col w-full">
+      <div className="flex  flex-col w-full  overflow-hidden">
         <Header />
         <div className=" h-full z-30 bg-slate-300">
-          <Dashboard />
+          {/* <Dashboard /> */}
+          {/* <Inventory /> */}
+
+          {getCorrectPage(activeTab)}
         </div>
       </div>
     </div>

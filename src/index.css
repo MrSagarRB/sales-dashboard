@@ -109,6 +109,10 @@
     /* font-weight: bold; */
   }
 
+  .animation1{
+    transition: 0.5s;
+  }
+
 
 
  

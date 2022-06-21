@@ -14,6 +14,9 @@ import PurchaseOrder from "./PurchaseOrder";
 import CountUp from "react-countup";
 import TopSellingProduct from "./TopSellingProduct";
 import SaleOrderChart from "./SaleOrderChart";
+import ItemTable from "./ItemTable";
+import AmazonVendorCard from "./AmazonVendorCard";
+import { SmoothProvider } from "react-smooth-scrolling";
 
 const colorCardData = [
   {
@@ -81,15 +84,186 @@ const whiteCardData = [
   },
 ];
 
+const itemAtLowQuntity = {
+  title: " Items At Low Quantity",
+  tableData: [
+    {
+      sku: "ZG011AQA",
+      inventory: "Summer shoe",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "Cap (Green)",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "Jens Pants",
+      incomingPo: "2",
+    },
+
+    {
+      sku: "ZG011AQA",
+      inventory: "Shoes",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "T Shirts",
+      incomingPo: "2",
+    },
+    ,
+    {
+      sku: "ZG011AQA",
+      inventory: " Kids Cap",
+      incomingPo: "2",
+    },
+
+    {
+      sku: "ZG011AQA",
+      inventory: "Mobile",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "Laptop",
+      incomingPo: "2",
+    },
+  ],
+};
+
+const itemOutOfStock = {
+  title: "Items Out Of Stock",
+  tableData: [
+    {
+      sku: "ZG011AQA",
+      inventory: "Summer shoe",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "Cap (Green)",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "Jens Pants",
+      incomingPo: "2",
+    },
+
+    {
+      sku: "ZG011AQA",
+      inventory: "Shoes",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "T Shirts",
+      incomingPo: "2",
+    },
+    ,
+    {
+      sku: "ZG011AQA",
+      inventory: " Kids Cap",
+      incomingPo: "2",
+    },
+
+    {
+      sku: "ZG011AQA",
+      inventory: "Mobile",
+      incomingPo: "2",
+    },
+    {
+      sku: "ZG011AQA",
+      inventory: "Laptop",
+      incomingPo: "2",
+    },
+  ],
+};
+const amzonCardData = {
+  title: "Amazon vendor order processing",
+  tableData: [
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+    {
+      OrderID: "ZG011AQA",
+      status: "Pending",
+      skuQty: "2",
+      itemQty: "365",
+      orderValue: "359579",
+    },
+  ],
+};
+
 function Dashboard() {
-
-
   return (
     <div className="py-[10px] px-[20px]  overflow-scroll h-full ">
       <div className="  flex flex-col sm:flex-row justify-between  items-center overflow-hidden">
         <p>Sales Activity for this week</p>{" "}
         <div className=" flex items-center gap-3">
-          <div className=" lg2 w-[123px]  h-[43px] rounded-[21px] flex items-center justify-center  ">
+          <div className=" lg2 w-[123px]  h-[43px] rounded-[21px] flex items-center justify-center  cursor-pointer hover:opacity-70 ">
             {" "}
             <p className="text-[#ffff]"> Edit layout</p>{" "}
           </div>{" "}
@@ -137,7 +311,9 @@ function Dashboard() {
               </div>
               <div className="  flex justify-between items-center ">
                 {" "}
-                <p className="text-[32px] text-[#1F4173] "><CountUp end={i.value} delay={3} /></p>{" "}
+                <p className="text-[32px] text-[#1F4173] ">
+                  <CountUp end={i.value} delay={3} />
+                </p>{" "}
                 <div className="h-[43px] w-[41px] bg-[#E6EAF0] flex items-center justify-center ">
                   {" "}
                   <ArrowForwardIosIcon />
@@ -147,13 +323,26 @@ function Dashboard() {
           );
         })}
       </div>
-      <div className="  mt-5 w-[100%] h-[496px] flex flex-col md:flex-row    gap-5">
+      <section
+        id="inventory"
+        className="  mt-5 w-[100%] h-[496px] flex flex-col md:flex-row    gap-5"
+      >
         <SaleOrderTable />
         <PurchaseOrder />
-       <TopSellingProduct/>
-     
+        <TopSellingProduct />
+      </section>
+
+      <div>
+        {" "}
+        <SaleOrderChart />
       </div>
-      <SaleOrderChart />
+      <div className="  h-[437px] sm:mt-5 mt-[500px] flex gap-5 ">
+        <ItemTable data={itemAtLowQuntity} />
+        <ItemTable data={itemOutOfStock} />
+      </div>
+      <div className=" h-[459px]  sm:mt-5  ">
+        <AmazonVendorCard data={amzonCardData} />
+      </div>
     </div>
   );
 }

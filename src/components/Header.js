@@ -10,7 +10,7 @@ import { Avatar } from "@nextui-org/react";
 
 function Header() {
   return (
-    <div className="  w-full bg_2 flex items-center px-0 justify-evenly ">
+    <div className="   w-full bg_2 flex items-center px-0 justify-evenly ">
       <div className="  gap-2 deskTopScreen-Only">
         <div className="flex items-center item-center gap-0 ">
           {" "}

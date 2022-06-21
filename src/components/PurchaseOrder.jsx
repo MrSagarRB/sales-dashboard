@@ -45,7 +45,7 @@ function PurchaseOrder() {
         <p className="text-[#1F4173] font-bold text-[16px]">
           Incoming purchase orders
         </p>
-        <div className="mt-3 flex flex-col gap-3">
+        <div className="mt-3 flex flex-col gap-3 h-[90%] ">
           {purchaseOrderData.map((i) => {
             return (
               <div className="flex justify-between">
